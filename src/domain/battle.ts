@@ -265,18 +265,25 @@ function executeTurn(actor: InternalCombatant, target: InternalCombatant, rng: R
 
 function selectAbility(actor: InternalCombatant): AbilityDefinition {
   const available = actor.skills.filter((skill) => actor.cooldowns[skill.id] === 0);
-  if (available.length === 0) {
-    return actor.skills[0];
+  if (available.length > 0) {
+    return available.reduce((chosen, current) => {
+      if (!chosen) {
+        return current;
+      }
+      if (current.cooldown > chosen.cooldown) {
+        return current;
+      }
+      return chosen;
+    });
   }
-  return available.reduce((chosen, current) => {
-    if (!chosen) {
-      return current;
-    }
-    if (current.cooldown > chosen.cooldown) {
-      return current;
-    }
-    return chosen;
-  });
+
+  const basicAttack = actor.skills.find((skill) => skill.id === BASIC_ATTACK.id);
+  const basicAttackCooldown = actor.cooldowns[basicAttack?.id ?? BASIC_ATTACK.id] ?? 0;
+  if (basicAttackCooldown === 0) {
+    return basicAttack ?? BASIC_ATTACK;
+  }
+
+  return BASIC_ATTACK;
 }
 
 function resolveAbilityUsage(
