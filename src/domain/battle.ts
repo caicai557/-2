@@ -161,40 +161,48 @@ export function simulateBattle(options: BattleOptions): BattleResult {
     }
   }
 
+  let resolvedWinner: FighterState;
+  let resolvedLoser: FighterState;
+
   if (!winner || !loser) {
-    const leftHp = fighters[0].hp;
-    const rightHp = fighters[1].hp;
+    const [leftFighter, rightFighter] = fighters;
+    const leftHp = leftFighter.hp;
+    const rightHp = rightFighter.hp;
+
     if (leftHp === rightHp) {
-      winner = leftHp >= rightHp ? fighters[0] : fighters[1];
-      loser = winner === fighters[0] ? fighters[1] : fighters[0];
+      resolvedWinner = leftHp >= rightHp ? leftFighter : rightFighter;
     } else {
-      winner = leftHp > rightHp ? fighters[0] : fighters[1];
-      loser = winner === fighters[0] ? fighters[1] : fighters[0];
+      resolvedWinner = leftHp > rightHp ? leftFighter : rightFighter;
     }
+    resolvedLoser = resolvedWinner === leftFighter ? rightFighter : leftFighter;
+
     log.push({
       type: "battleEnd",
       round: rounds,
-      winnerId: winner.id,
-      winnerName: winner.name,
-      loserId: loser.id,
-      loserName: loser.name,
+      winnerId: resolvedWinner.id,
+      winnerName: resolvedWinner.name,
+      loserId: resolvedLoser.id,
+      loserName: resolvedLoser.name,
       reason: "maxRounds",
     });
   } else {
+    resolvedWinner = winner;
+    resolvedLoser = loser;
+
     log.push({
       type: "battleEnd",
       round: rounds,
-      winnerId: winner.id,
-      winnerName: winner.name,
-      loserId: loser.id,
-      loserName: loser.name,
+      winnerId: resolvedWinner.id,
+      winnerName: resolvedWinner.name,
+      loserId: resolvedLoser.id,
+      loserName: resolvedLoser.name,
       reason: "knockout",
     });
   }
 
   return {
-    winnerId: winner.id,
-    loserId: loser.id,
+    winnerId: resolvedWinner.id,
+    loserId: resolvedLoser.id,
     rounds,
     log,
     finalState: Object.fromEntries(

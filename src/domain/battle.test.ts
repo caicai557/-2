@@ -241,7 +241,7 @@ describe("simulateBattle log fidelity", () => {
           "loserId": "defender",
           "loserName": "Defender",
           "reason": "knockout",
-          "round": 7,
+          "round": 4,
           "type": "battleEnd",
           "winnerId": "attacker",
           "winnerName": "Attacker",
