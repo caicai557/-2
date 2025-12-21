@@ -1,4 +1,13 @@
-const MOCK_RANKS = [
+// TODO: Replace mock data with real backend API integration
+// Future: Connect to server leaderboard and friend sparring system
+// See PRD v1.2 for backend integration plan (Node/Express + SQLite)
+interface RankEntry {
+  nickname: string;
+  level: number;
+  power: number;
+}
+
+const MOCK_RANKS: RankEntry[] = [
   { nickname: '少侠001', level: 18, power: 6400 },
   { nickname: '企鹅盟主', level: 16, power: 5900 },
   { nickname: '灵境行者', level: 15, power: 5400 },
