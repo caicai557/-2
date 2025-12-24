@@ -1,9 +1,11 @@
 import { NavLink, Outlet, Route, Routes } from 'react-router-dom';
+import { MotionConfig } from 'motion/react';
 
 import DevToolsPage from './pages/DevToolsPage';
 import HomePage from './pages/HomePage';
 import LogPage from './pages/LogPage';
 import PlayPage from './pages/PlayPage';
+import BattlePage from './pages/BattlePage';
 import RankPage from './pages/RankPage';
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -49,14 +51,17 @@ function Layout() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="play" element={<PlayPage />} />
-        <Route path="log" element={<LogPage />} />
-        <Route path="rank" element={<RankPage />} />
-        <Route path="dev" element={<DevToolsPage />} />
-      </Route>
-    </Routes>
+    <MotionConfig reducedMotion="user">
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="play" element={<PlayPage />} />
+          <Route path="battle/:stageId" element={<BattlePage />} />
+          <Route path="log" element={<LogPage />} />
+          <Route path="rank" element={<RankPage />} />
+          <Route path="dev" element={<DevToolsPage />} />
+        </Route>
+      </Routes>
+    </MotionConfig>
   );
 }

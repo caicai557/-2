@@ -1,0 +1,6 @@
+src/domain/battle.test.ts(396,1): error TS1005: '}' expected.
+src/domain/battle.ts(290,1): error TS1131: Property or signature expected.
+src/domain/battle.ts(623,1): error TS1128: Declaration or statement expected.
+tsconfig.json(1,1): error TS5092: The root value of a 'tsconfig.json' file must be an object.
+tsconfig.json(21,5): error TS1005: ',' expected.
+tsconfig.json(30,4): error TS1012: Unexpected token.

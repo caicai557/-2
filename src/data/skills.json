@@ -1,0 +1,341 @@
+[
+    {
+        "id": "lingyan_basic_strike",
+        "name": "凌烟破",
+        "sect": "lingyan",
+        "type": "physical",
+        "damageMultiplier": 1.2,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "凌烟阁基础物理攻击"
+    },
+    {
+        "id": "lingyan_heavy_strike",
+        "name": "碎岩击",
+        "sect": "lingyan",
+        "type": "physical",
+        "damageMultiplier": 1.8,
+        "effects": [
+            {
+                "type": "stun",
+                "duration": 1
+            }
+        ],
+        "description": "沉重一击，有几率击晕"
+    },
+    {
+        "id": "lingyan_combo",
+        "name": "连环三击",
+        "sect": "lingyan",
+        "type": "physical",
+        "damageMultiplier": 2.0,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "连续三段攻击"
+    },
+    {
+        "id": "lingyan_berserk",
+        "name": "狂战之怒",
+        "sect": "lingyan",
+        "type": "physical",
+        "damageMultiplier": 2.5,
+        "effects": [
+            {
+                "type": "weaken",
+                "duration": 2
+            }
+        ],
+        "description": "狂暴攻击，削弱敌人防御"
+    },
+    {
+        "id": "lingyan_ultimate",
+        "name": "凌烟斩龙",
+        "sect": "lingyan",
+        "type": "physical",
+        "damageMultiplier": 3.0,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "凌烟阁终极奥义"
+    },
+    {
+        "id": "piaomiao_ice_arrow",
+        "name": "寒冰箭",
+        "sect": "piaomiao",
+        "type": "magic",
+        "damageMultiplier": 1.4,
+        "effects": [
+            {
+                "type": "slow",
+                "duration": 2
+            }
+        ],
+        "description": "冰霜魔法，减缓敌人速度"
+    },
+    {
+        "id": "piaomiao_fireball",
+        "name": "烈焰球",
+        "sect": "piaomiao",
+        "type": "magic",
+        "damageMultiplier": 1.8,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "火焰魔法，大范围伤害"
+    },
+    {
+        "id": "piaomiao_lightning",
+        "name": "雷霆万钧",
+        "sect": "piaomiao",
+        "type": "magic",
+        "damageMultiplier": 2.2,
+        "effects": [
+            {
+                "type": "stun",
+                "duration": 1
+            }
+        ],
+        "description": "召唤雷霆，麻痹敌人"
+    },
+    {
+        "id": "piaomiao_arcane_blast",
+        "name": "奥术冲击",
+        "sect": "piaomiao",
+        "type": "magic",
+        "damageMultiplier": 2.4,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "纯粹的魔法能量爆发"
+    },
+    {
+        "id": "piaomiao_ultimate",
+        "name": "缥缈天降",
+        "sect": "piaomiao",
+        "type": "magic",
+        "damageMultiplier": 2.8,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "缥缈峰终极法术"
+    },
+    {
+        "id": "taixu_summon_spirit",
+        "name": "灵兽召唤",
+        "sect": "taixu",
+        "type": "summon",
+        "damageMultiplier": 1.5,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "召唤灵兽协助战斗"
+    },
+    {
+        "id": "taixu_possession",
+        "name": "灵魂附体",
+        "sect": "taixu",
+        "type": "summon",
+        "damageMultiplier": 1.9,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "让灵体附身提升战力"
+    },
+    {
+        "id": "taixu_phantom_strike",
+        "name": "幻影突袭",
+        "sect": "taixu",
+        "type": "summon",
+        "damageMultiplier": 2.1,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "召唤幻影进行突袭"
+    },
+    {
+        "id": "taixu_spirit_storm",
+        "name": "灵魂风暴",
+        "sect": "taixu",
+        "type": "summon",
+        "damageMultiplier": 2.3,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "大量灵体同时攻击"
+    },
+    {
+        "id": "taixu_ultimate",
+        "name": "太虚之力",
+        "sect": "taixu",
+        "type": "summon",
+        "damageMultiplier": 2.6,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "太虚观终极召唤"
+    },
+    {
+        "id": "wansheng_heal",
+        "name": "回春术",
+        "sect": "wansheng",
+        "type": "heal",
+        "damageMultiplier": 0.5,
+        "effects": [
+            {
+                "type": "heal",
+                "power": 50
+            }
+        ],
+        "description": "治疗自身伤势"
+    },
+    {
+        "id": "wansheng_blessing",
+        "name": "圣光祝福",
+        "sect": "wansheng",
+        "type": "heal",
+        "damageMultiplier": 0.8,
+        "effects": [
+            {
+                "type": "heal",
+                "power": 80
+            }
+        ],
+        "description": "圣光笼罩，持续恢复"
+    },
+    {
+        "id": "wansheng_purify",
+        "name": "净化之光",
+        "sect": "wansheng",
+        "type": "heal",
+        "damageMultiplier": 1.0,
+        "effects": [
+            {
+                "type": "heal",
+                "power": 100
+            }
+        ],
+        "description": "净化负面状态并治疗"
+    },
+    {
+        "id": "wansheng_divine_shield",
+        "name": "神圣护盾",
+        "sect": "wansheng",
+        "type": "heal",
+        "damageMultiplier": 0.3,
+        "effects": [
+            {
+                "type": "none"
+            }
+        ],
+        "description": "提供强大护盾"
+    },
+    {
+        "id": "wansheng_ultimate",
+        "name": "万圣之光",
+        "sect": "wansheng",
+        "type": "heal",
+        "damageMultiplier": 0.6,
+        "effects": [
+            {
+                "type": "heal",
+                "power": 150
+            }
+        ],
+        "description": "万圣山终极治疗"
+    },
+    {
+        "id": "youming_soul_drain",
+        "name": "摄魂术",
+        "sect": "youming",
+        "type": "control",
+        "damageMultiplier": 1.3,
+        "effects": [
+            {
+                "type": "weaken",
+                "duration": 3
+            }
+        ],
+        "description": "吸取敌人精气"
+    },
+    {
+        "id": "youming_acupoint",
+        "name": "点穴封脉",
+        "sect": "youming",
+        "type": "control",
+        "damageMultiplier": 1.1,
+        "effects": [
+            {
+                "type": "stun",
+                "duration": 2
+            }
+        ],
+        "description": "封住敌人穴道"
+    },
+    {
+        "id": "youming_fear",
+        "name": "恐惧术",
+        "sect": "youming",
+        "type": "control",
+        "damageMultiplier": 1.5,
+        "effects": [
+            {
+                "type": "slow",
+                "duration": 3
+            }
+        ],
+        "description": "让敌人陷入恐惧"
+    },
+    {
+        "id": "youming_curse",
+        "name": "幽冥诅咒",
+        "sect": "youming",
+        "type": "control",
+        "damageMultiplier": 1.7,
+        "effects": [
+            {
+                "type": "poison",
+                "duration": 3,
+                "power": 10
+            }
+        ],
+        "description": "诅咒敌人持续受伤"
+    },
+    {
+        "id": "youming_ultimate",
+        "name": "幽冥鬼爪",
+        "sect": "youming",
+        "type": "control",
+        "damageMultiplier": 2.0,
+        "effects": [
+            {
+                "type": "stun",
+                "duration": 2
+            }
+        ],
+        "description": "幽冥宫终极控制"
+    }
+]

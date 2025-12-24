@@ -1,0 +1,134 @@
+[
+    {
+        "id": "rabbit_1",
+        "name": "小兔子",
+        "level": 1,
+        "attributes": {
+            "strength": 5,
+            "agility": 8,
+            "speed": 10,
+            "maxHp": 50
+        }
+    },
+    {
+        "id": "puppy_2",
+        "name": "小狗",
+        "level": 2,
+        "attributes": {
+            "strength": 8,
+            "agility": 6,
+            "speed": 8,
+            "maxHp": 60
+        }
+    },
+    {
+        "id": "wildcat_5",
+        "name": "野猫",
+        "level": 5,
+        "attributes": {
+            "strength": 12,
+            "agility": 15,
+            "speed": 14,
+            "maxHp": 100
+        }
+    },
+    {
+        "id": "loach_8",
+        "name": "泥鳅",
+        "level": 8,
+        "attributes": {
+            "strength": 10,
+            "agility": 20,
+            "speed": 18,
+            "maxHp": 120
+        }
+    },
+    {
+        "id": "thug_10",
+        "name": "流氓",
+        "level": 10,
+        "attributes": {
+            "strength": 20,
+            "agility": 12,
+            "speed": 10,
+            "maxHp": 180
+        }
+    },
+    {
+        "id": "black_bear_12",
+        "name": "黑熊",
+        "level": 12,
+        "attributes": {
+            "strength": 30,
+            "agility": 8,
+            "speed": 6,
+            "maxHp": 250
+        }
+    },
+    {
+        "id": "wild_boar_15",
+        "name": "野猪",
+        "level": 15,
+        "attributes": {
+            "strength": 35,
+            "agility": 10,
+            "speed": 8,
+            "maxHp": 300
+        }
+    },
+    {
+        "id": "viper_18",
+        "name": "毒蛇",
+        "level": 18,
+        "attributes": {
+            "strength": 25,
+            "agility": 30,
+            "speed": 25,
+            "maxHp": 200
+        }
+    },
+    {
+        "id": "shadow_assassin_20",
+        "name": "暗影刺客",
+        "level": 20,
+        "attributes": {
+            "strength": 40,
+            "agility": 45,
+            "speed": 40,
+            "maxHp": 350
+        }
+    },
+    {
+        "id": "fire_mage_22",
+        "name": "火焰法师",
+        "level": 22,
+        "attributes": {
+            "strength": 30,
+            "agility": 35,
+            "speed": 30,
+            "maxHp": 320
+        }
+    },
+    {
+        "id": "ice_witch_25",
+        "name": "冰霜女巫",
+        "level": 25,
+        "attributes": {
+            "strength": 35,
+            "agility": 40,
+            "speed": 35,
+            "maxHp": 380
+        }
+    },
+    {
+        "id": "demon_king_30",
+        "name": "魔王",
+        "level": 30,
+        "attributes": {
+            "strength": 60,
+            "agility": 50,
+            "speed": 45,
+            "maxHp": 600
+        }
+    }
+]

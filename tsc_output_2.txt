@@ -1,0 +1,4 @@
+src/application/battleResolver.ts(1,15): error TS2305: Module '"../domain/battle"' has no exported member 'BattleParticipant'.
+src/application/battleResolver.ts(1,34): error TS2305: Module '"../domain/battle"' has no exported member 'BattleSimulationResult'.
+src/application/battleResolver.ts(1,58): error TS2305: Module '"../domain/battle"' has no exported member 'Seed'.
+src/components/__tests__/HPBar.test.tsx(1,32): error TS2307: Cannot find module '@testing-library/react' or its corresponding type declarations.

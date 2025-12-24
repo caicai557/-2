@@ -10,8 +10,11 @@ export interface GameState {
   hero: HeroState;
   battles: BattleRecord[];
   stages: Stage[];
+  activeBattle: BattleRecord | null;
   initialize: (nickname?: string) => void;
   runBattle: (stageId: number) => BattleRecord;
+  startBattle: (stageId: number) => void;
+  finishBattle: () => void;
   grantOffline: () => { expGain: number; silverGain: number; accumulatedHours: number };
 }
 
@@ -155,6 +158,7 @@ export const useGameStore = create<GameState>()(
       hero: createHeroState('新晋少侠'),
       battles: [],
       stages: DEFAULT_STAGES,
+      activeBattle: null,
       initialize: (nickname = '新晋少侠') => {
         set({ hero: createHeroState(nickname), battles: [] });
       },
@@ -183,6 +187,46 @@ export const useGameStore = create<GameState>()(
           battles: [record, ...state.battles].slice(0, 20),
         });
         return record;
+      },
+      startBattle: (stageId) => {
+        const state = get();
+        const stage = state.stages.find((s) => s.id === stageId);
+        if (!stage) {
+          throw new Error(`Stage ${stageId} not found`);
+        }
+        const seed = Date.now();
+        const record = simulateBattle(asHero(state.hero), instantiateEnemy(stage), seed);
+        set({ activeBattle: record });
+      },
+      finishBattle: () => {
+        const state = get();
+        if (!state.activeBattle) return;
+
+        const battle = state.activeBattle;
+        const stage = state.stages.find((s) => s.enemy.id === battle.enemy.id);
+        if (!stage) {
+          set({ activeBattle: null });
+          return;
+        }
+
+        const rewards = computeStageRewards(stage, state.hero.level);
+        const heroAfterExperience =
+          battle.outcome === 'hero'
+            ? settleExperience(state.hero, rewards.exp + state.hero.offlineExp)
+            : { ...state.hero, offlineExp: state.hero.offlineExp };
+        const heroWithSilver =
+          battle.outcome === 'hero'
+            ? { ...heroAfterExperience, silver: heroAfterExperience.silver + rewards.silver, offlineExp: 0 }
+            : heroAfterExperience;
+
+        set({
+          hero: {
+            ...heroWithSilver,
+            lastLoginAt: Date.now(),
+          },
+          battles: [battle, ...state.battles].slice(0, 20),
+          activeBattle: null,
+        });
       },
       grantOffline: () => {
         const state = get();

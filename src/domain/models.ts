@@ -58,6 +58,7 @@ export interface CombatantSummary {
   maxHp: number;
   remainingHp: number;
   attributes: Attributes;
+  skills: Skill[];
 }
 
 export interface TurnLogEntry {
